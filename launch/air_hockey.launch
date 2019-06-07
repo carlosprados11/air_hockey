@@ -1,0 +1,13 @@
+<launch>
+
+	<group ns="nodos_air_hockey">
+
+		<!-- By default, we do not start a database (it can be large) -->
+	  	<!--<arg name="initial_state" value="1" /-->
+		<!--node name="gestor" pkg="air_hochey"  type="gestor"/-->	
+		<node name="planificador" pkg="air_hochey" type="planificador"/>
+		<!--node name="gestor_es" pkg="air_hochey" type="gestor_es"/>
+		<node name="prediccion" pkg="air_hochey" type="prediccion"/-->
+
+	</group>
+</launch>

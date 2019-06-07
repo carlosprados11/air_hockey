@@ -1,0 +1,27 @@
+PRUEBAS DEL PLANIFICADOR (recomendable bajar la frecuencia)
+
+- Cambiar la posición del disco:
+	rostopic pub --once /pos_disco air_hockey/hockey_pose "{tiempo: 0.0, x: 0.0, y: 0.0, cal_x: false, cal_y: false}"
+
+- Cambiar la posición del robot:
+	rostopic pub --once /pos_robot air_hockey/hockey_pose "{tiempo: 0.0, x: 0.0, y: 0.0, cal_x: false, cal_y: false}"
+
+- Cambiar la posición objetivo:
+	rostopic pub --once /pos_objetivo air_hockey/hockey_pose "{tiempo: 0.0, x: 0.0, y: 0.0, cal_x: false, cal_y: false}"
+
+- Cambiar el modo de funcionamiento:
+	rostopic pub --once /estado_global std_msgs/Int8 "data: 0"
+
+- Ver lo que está publicando
+	rostopic echo /pos_dest
+
+PRUEBAS DEL GESTOR DE E/S (recomendable bajar la frecuencia)
+
+- Cambiar la posición de destino
+	rostopic pub --once /pos_dest air_hockey/hockey_pose "{tiempo: 0.0, x: 0.0, y: 0.0, cal_x: false, cal_y: false}"
+
+- Cambiar el modo de funcionamiento:
+	rostopic pub --once /estado_global std_msgs/Int8 "data: 0"
+
+- Ver lo que está publicando
+	rostopic echo /control
